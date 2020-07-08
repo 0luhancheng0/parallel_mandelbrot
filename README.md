@@ -22,6 +22,23 @@ sbatch runall.sh
 It will run serial.sh once and parallel.sh with 2,4,6,10 cores. You can change sequence in runall.sh or parallel.sh to test other configuration
 you may need to change some parameters on slurm script (most likely partition name) depending on which system you are using
 
+## Result
+
+
+theoretical vs actual speedup factor
+
+![theoretical vs actual speedup factor](report/images/fig1.png)
+
+theoretical vs actual time
+
+![theoretical vs actual time](report/images/fig2.png)
+
+profiling output 
+![MPIP profiling](report/images/fig3.png)
+
+Full experiment outcome and hardward config
+
+![experiments output and hardware config](report/images/fig4.png)
 ### report generation
 if you have submitted by batch, you can run 
 ```
