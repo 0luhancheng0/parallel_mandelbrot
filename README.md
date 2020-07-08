@@ -34,6 +34,7 @@ theoretical vs actual time
 ![theoretical vs actual time](report/images/fig2.png)
 
 profiling output 
+
 ![MPIP profiling](report/images/fig3.png)
 
 Full experiment outcome and hardward config
