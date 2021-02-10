@@ -4,6 +4,7 @@
 #include <math.h>
 #include <memory.h>
 #include <unistd.h>
+#include "mandelbrot.h"
 // same ordering with code from serial code
 
 static void mandelbrot(double Cx, double Cy, unsigned char pixel[3]) {
@@ -11,7 +12,7 @@ static void mandelbrot(double Cx, double Cy, unsigned char pixel[3]) {
 	double Zx2, Zy2; /* Zx2 = Zx*Zx;  Zy2 = Zy*Zy  */
 
 	int Iteration;
-	const int IterationMax = 2000; // default
+	const int IterationMax = ITERATION_MAX; // default
 
 	const double EscapeRadius = 400;
 	double ER2 = EscapeRadius * EscapeRadius;
@@ -70,14 +71,14 @@ int main(int argc, char *argv[]) {
 	// int imagesize;
 	/* screen ( integer) coordinate */
 	int iX, iY;
-	const int iXmax=8000; // default
-	const int iYmax=8000; // default
+	const int iXmax=IX_MAX; // default
+	const int iYmax=IY_MAX; // default
 	/* world ( double) coordinate = parameter plane*/
 	double Cx, Cy;
-	const double CxMin = -2.5;
-	const double CxMax = 1.5;
-	const double CyMin = -2.0;
-	const double CyMax = 2.0;
+	const double CxMin = CX_MIN;
+	const double CxMax = CX_MAX;
+	const double CyMin = CY_MIN;
+	const double CyMax = CY_MAX;
 
 	double PixelWidth = (CxMax - CxMin) / iXmax;
 	double PixelHeight = (CyMax - CyMin) / iYmax;
