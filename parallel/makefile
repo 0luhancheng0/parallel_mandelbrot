@@ -2,7 +2,7 @@ UNAME := $(shell uname)
 
 ALL: mandelbrot
 CC =  mpicc
-profile_flags =-L/home/luhanc/mpiP/lib -L/home/luhanc/libunwind/build/lib -lmpiP -lbfd -liberty -lunwind
+profile_flags = -lmpiP -lbfd -liberty -lunwind
 compile_flags = -lm -O3 -I. -std=c99
 debug_flags = -O0 -g3
 runtime_flags = -n 2
